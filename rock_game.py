@@ -6,6 +6,13 @@ count_player=0
 while True:
             chance=input('Enter one from stone, paper, scissor: ')
             player=chance.lower()
+            if player not in lst:
+                print('Invalid Input..... Try Again!!!')
+                user=input('Do u want to continue (y/n):')
+                if user=='y':
+                    continue
+                else:
+                    break
             computer=random.choice(lst)
             print('Computer has taken', computer)
             
